@@ -19,71 +19,75 @@
 
 <!-- BODY -->
 <body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="blue">
-        <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-        -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal text-center">
-          IMSOTEC
-        </a>
-      </div>
+    <div class="wrapper ">
+        <div class="sidebar" data-color="blue">
+                <!--
+                Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+                -->
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text logo-normal text-center">
+                  IMSOTEC
+                </a>
+            </div>
 
-      <!-- MENÚ -->
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li>
-            <a href="./dashboard.html">
-              <i class="now-ui-icons design_app"></i>
-              <p>Link 1</p>
-            </a>
-          </li>
-          <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Link 2</p>
-            </a>
-          </li>
-          <li>
-            <a href="./map.html">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Link 3</p>
-            </a>
-          </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Link 4</p>
-            </a>
-          </li>
-          <li class="active ">
-            <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>Usuarios</p>
-            </a>
-          </li>
-          <li>
-            <a href="./tables.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Tablas</p>
-            </a>
-          </li>
-          <li>
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Typografia</p>
-            </a>
-          </li>
-          <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+            <!-- MENÚ -->
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active ">
+                    <a href="./user.html">
+                      <i class="now-ui-icons users_single-02"></i>
+                      <p>Usuarios</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./dashboard.html">
+                      <i class="now-ui-icons design_app"></i>
+                      <p>Link 1</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./icons.html">
+                      <i class="now-ui-icons education_atom"></i>
+                      <p>Link 2</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./map.html" id="empresasLink">
+                      <i class="now-ui-icons business_briefcase-24"></i>
+                      <p>Empresas</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./notifications.html">
+                      <i class="now-ui-icons ui-1_bell-53"></i>
+                      <p>Link 4</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./tables.html">
+                      <i class="now-ui-icons design_bullet-list-67"></i>
+                      <p>Tablas</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./typography.html">
+                      <i class="now-ui-icons text_caps-small"></i>
+                      <p>Typografia</p>
+                    </a>
+                </li>
+
+                <li class="active-pro">
+                    <a href="./upgrade.html">
+                      <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+                      <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
+
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute bg-primary fixed-top">
@@ -106,7 +110,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" value="" class="form-control" placeholder="Buscar...">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="now-ui-icons ui-1_zoom-bold"></i>
@@ -154,51 +158,153 @@
 
       <!-- *****  Content  ***** -->
       <div class="content">
-        <div class="row">
+        <div class="row" id="gestionUsuarios">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="card-header">
+                          <h5 class="title"> <i class="fas fa-user"></i> Usuarios</h5>
+                      </div>
+
+                      <div class="card-body">
+                          <p>Selecciona los registros a gestionar.</p>
+                          <div class="row">
+                              <div class="col-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
+                                  <button type="button" class="btn btn-success btn-round btn-block" id="btnAgregar">
+                                      <i class="fa fa-plus-circle"></i> Agregar
+                                  </button>
+                              </div>
+                              <div class="col-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
+                                  <button type="button" class="btn btn-warning btn-round btn-block" id="btnEditar">
+                                      <i class="fa fa-edit"></i> Editar
+                                  </button>
+                              </div>
+                              <div class="col-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
+                                  <button type="button" class="btn btn-danger btn-round btn-block" id="btnEliminar">
+                                      <i class="fa fa-trash-alt"></i> Eliminar
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+                              <div class="col-12 col-sm-10 col-md-1 col-lg-10 col-xl-10">
+                                  <div class="table">
+                                      <table class="table" id="dtUsuarios">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center">Usuario</th>
+                                                  <th class="text-center">Contraseña</th>
+                                                  <th class="text-center">Rol</th>
+                                                  <th class="text-center">Nombre</th>
+                                                  <th class="text-center">Apellidos</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td class="text-center">cristoforo</td>
+                                                  <td class="text-center">flecha10</td>
+                                                  <td class="text-center">Administrador</td>
+                                                  <td class="text-center">Cristoph</td>
+                                                  <td class="text-center">Ramirez Loyo</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        <div class="row invisible" id="formUsuario">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                    <h5 class="title"> <i class="fas fa-user"></i> Usuarios</h5>
-                </div>
-                <div class="card-body">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Usuario</label>
-                                <input type="text" class="form-control" placeholder="Ingrese El Usuario">
-                            </div>
-                        </div>
-                        <div class="col-md-6 pl-1 pr-1">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" placeholder="Ingrese El Nombre">
-                            </div>
-                        </div>
+                        <h5 class="title"> <i class="fas fa-user"></i> Usuarios</h5>
                     </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <button type="button" class="btn btn-danger btn-round btn-block" id="btnRegresar">
+                                    <i class="fa fa-reply"></i> Regresar
+                                </button>
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-md-6 pr-1">
-                            <div class="form-group">
-                                <label>Apellido Paterno</label>
-                                <input type="text" class="form-control"
-                                placeholder="Ingrese El Apellido Paterno">
+                        <form>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Usuario</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese El Usuario"
+                                               id="usuario" name="usuario">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Contraseña</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese El Usuario"
+                                                id="contrasena" name="contrasena">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 pl-1">
-                            <div class="form-group">
-                                <label>Apellido Materno</label>
-                                <input type="text" class="form-control"
-                                placeholder="Ingrese El Apellido Paterno">
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Rol</label>
+                                        <select class="form-control" placeholder="Ingrese El Nombre"
+                                                id="rol" name="rol">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese El Nombre">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Apellido Paterno</label>
+                                        <input type="text" class="form-control"
+                                        placeholder="Ingrese El Apellido Paterno">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Apellido Materno</label>
+                                        <input type="text" class="form-control"
+                                        placeholder="Ingrese El Apellido Paterno">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                    <button type="button" class="btn btn-info pull-right">
+                                        <i class="fas fa-check"></i> Guardar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
-                </form>
-              </div>
-            </div>
+                </div>
             </div>
         </div>
-      </div>
+
+      <!-- Footer -->
       <footer class="footer">
         <div class="container-fluid">
           <nav>
@@ -247,6 +353,7 @@
   <script src="assets/js/now-ui-dashboard.min.js?v=1.1.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
+  <script src="modules/user.js" charset="utf-8"></script>
 </body>
 
 </html>
