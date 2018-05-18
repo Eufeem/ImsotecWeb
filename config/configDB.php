@@ -1,10 +1,8 @@
 <?php
-    /**
-     *
-     */
+    
     class DataBase {
-        private $host = "localhost";
-        private $dbName = "imsotec";
+        private $host     = "localhost";
+        private $dbName   = "imsotec";
         private $userName = "root";
         private $password = "";
         public  $conn;
