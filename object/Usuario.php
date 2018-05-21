@@ -26,8 +26,7 @@
 
         // Método Insertar
         function insertar() {
-            $query = "INSERT INTO usuarios SET usuario=:usuario,
-                      password=:password, rol=:rol, nombre=:nombre,
+            $query = "INSERT INTO usuarios SET usuario=:usuario, password=:password, rol=:rol, nombre=:nombre,
                       apPaterno=:apPaterno, apMaterno=:apMaterno";
             $stmt = $this->conn->prepare($query);
             $this->usuario   = htmlspecialchars(strip_tags($this->usuario));
@@ -49,7 +48,7 @@
         }
 
         // Método Eliminar
-        function delete() {
+        function eliminar() {
             $query = "DELETE FROM usuarios WHERE idUsuario=:idUsuario";
             $stmt = $this->conn->prepare($query);
             $this->idUsuario  = htmlspecialchars(strip_tags($this->idUsuario));
@@ -61,9 +60,8 @@
         }
 
         // Método Actualizar
-        function update() {
-            $query = "UPDATE usuarios SET
-                     usuario=:usuario, password=:password, rol=:rol, nombre=:nombre,
+        function actualizar() {
+            $query = "UPDATE usuarios SET usuario=:usuario, password=:password, rol=:rol, nombre=:nombre,
                      apPaterno=:apPaterno, apMaterno=:apMaterno WHERE idUsuario=:idUsuario";
             $stmt = $this->conn->prepare($query);
             $this->idUsuario = htmlspecialchars(strip_tags($this->idUsuario));

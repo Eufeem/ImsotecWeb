@@ -1,5 +1,5 @@
 <?php
-    
+
     class DataBase {
         private $host     = "localhost";
         private $dbName   = "imsotec";
@@ -18,5 +18,6 @@
             return $this->conn;
         }
     }
+
 
  ?>
