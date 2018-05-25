@@ -1,0 +1,23 @@
+/* Success */
+.has-success .form-control {
+    color: #87CB16 !important;
+    border-color: #87CB16 !important;
+}
+
+.has-success .form-control:focus {
+    border-color: #87CB16 !important;
+}
+
+/* Error */ 
+.has-error .form-control {
+    color: #FF4A55 !important;
+    border-color: #FF4A55 !important;
+}
+
+.has-error .form-control:focus {
+    border-color: #FF4A55 !important;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #FF4A55 !important;
+}
