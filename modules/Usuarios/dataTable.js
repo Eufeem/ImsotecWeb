@@ -12,7 +12,13 @@ function initDataTable() {
         success: function (data) {
             $.each(data, function(i, item){
                 $.each(item, function (index1, item1) {
-                    datos.push([item1.idUsuario, item1.usuario, item1.password, item1.rol,
+
+					if (item1.rol == 1) {
+						var rol = 'Administrador'
+					} else {
+						var rol = 'Usuario'
+					}
+                    datos.push([item1.idUsuario, item1.usuario, item1.password, rol,
                                 item1.nombre, item1.apPaterno, item1.apMaterno]);
                 });
             });
@@ -86,9 +92,15 @@ function cargarTabla() {
         dataType: 'json',
         contentType: 'application/json; charset=utf-8',
         success: function (data) {
-            $.each(data, function(i, item){
+			$.each(data, function(i, item){
                 $.each(item, function (index1, item1) {
-                    datos.push([item1.idUsuario, item1.usuario, item1.password, item1.rol,
+
+					if (item1.rol == 1) {
+						var rol = 'Administrador'
+					} else {
+						var rol = 'Usuario'
+					}
+                    datos.push([item1.idUsuario, item1.usuario, item1.password, rol,
                                 item1.nombre, item1.apPaterno, item1.apMaterno]);
                 });
             });

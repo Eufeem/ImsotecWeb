@@ -26,8 +26,8 @@ $("#btnRegresar").click( () => {
  */
 
 function regresaFormulario(){
-	// $('#form')[0].reset();
-    // $('#form').bootstrapValidator('destroy');
+	$('#form')[0].reset();
+    $('#form').bootstrapValidator('destroy');
 
 	$("#formDiv").toggle("swing");
 	$("#gestionDiv").toggle("swing");
