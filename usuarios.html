@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>IMSOTEC</title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/now-ui-dashboard.css?v=1.1.0" rel="stylesheet" />
   <link href="assets/css/validate.css" rel="stylesheet" />
-  <!-- <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   <link href="assets/demo/demo.css" rel="stylesheet" />
-
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 </head>
 
 <!-- BODY -->
@@ -102,7 +104,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Gestión De Usuarios</a>
+            <a class="navbar-brand" href="#modulo">Gestión De Usuarios</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -171,7 +173,7 @@
                           <p>Selecciona los registros a gestionar.</p>
                           <div class="row">
                               <div class="col-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                                  <button type="button" class="btn btn-success btn-round btn-block" id="btnAgregar">
+                                  <button type="button" class="btn btn-info btn-round btn-block" id="btnAgregar">
                                       <i class="fa fa-plus-circle"></i> Agregar
                                   </button>
                               </div>
@@ -250,8 +252,8 @@
                                 <div class="col-xs-12 col-md-6">
                                     <div class="form-group">
                                         <label>Rol</label>
-                                        <select class="form-control" placeholder="Ingrese El Nombre"
-                                                id="rol" name="rol">
+                                        <select class="form-control" id="rol" name="rol">
+                                        	<option disabled selected value>Selecciona</option>
                                             <option value="1">Adminitrador</option>
                                             <option value="2">Usuario</option>
                                         </select>
@@ -331,11 +333,11 @@
       </footer>
     </div>
   </div>
-  <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js"></script>
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  
+  
+  
+  
+  
   <!-- Chart JS -->
   <script src="assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -357,6 +359,34 @@
   <script src="modules/Usuarios/dataTable.js" charset="utf-8"></script>
   <script src="modules/Usuarios/botones.js" charset="utf-8"></script>
   <script src="modules/Usuarios/bootstrapValidator.js" charset="utf-8"></script>
+  
+  
+  </div>
+  
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <h4 id="modalMensaje" class="text-center"></h4>	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+	        <button type="button" class="btn btn-info" data-dismiss="modal"
+					id="btnEliminarModal">
+					<i class="fa fa-check"></i> Aceptar
+			</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </body>
 
 </html>

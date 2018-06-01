@@ -7,14 +7,33 @@ $("#btnAgregar").click( () => {
 	$("#formDiv").removeClass("invisible");
 	$("#formDiv").toggle("swing");
 
-	// $("#btnEditarForm").hide();
-	// $("#btnGuardar").show();
+	$("#btnEditarForm").hide();
+	$("#btnGuardar").show();
 });
 
+//Eliminar
+$("#btnEliminar").click(() => {
+	if (data != undefined) {
+		console.log(data);
+		eliminar(data);
+	} else {
+		notifyWarning('Error', 'No se ha seleccionado ningun registro a eliminar');
+	}
+});
 
 // Regresar
 $("#btnRegresar").click( () => {
 	regresaFormulario();
+});
+
+// Editar
+$("#btnEditar").click(() => {
+	bootsValEditar();
+	if (data != undefined) {
+		formEditar(data);
+	} else {
+		notifyWarning('Error', 'No se ha seleccionado ningun registro a editar');
+	}
 });
 
 /*
@@ -31,8 +50,8 @@ function regresaFormulario(){
 
 	$("#formDiv").toggle("swing");
 	$("#gestionDiv").toggle("swing");
-	// $("#editLabel").hide();
-	// $("#addLabel").show();
-	// $("#btnGuardarEditar").hide();
-	// $("#btnGuardar").show();
+	$("#editLabel").hide();
+	$("#addLabel").show();
+	$("#btnGuardarEditar").hide();
+	$("#btnGuardar").show();
 }

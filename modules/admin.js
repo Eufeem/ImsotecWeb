@@ -57,12 +57,8 @@ function notifyWarning(titulo, mensaje) {
         timer: 1000,
         placement: {
             from: "top",
-            align: "right"
-        },
-        animate: {
-            enter: 'animated bounceIn',
-		    exit: 'animated bounceOut'
-	    }
+            align: "center"
+        }
     });
 }
 

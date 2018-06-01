@@ -1,7 +1,7 @@
 // DataTable Usuarios JS
 
-// Cosulta
 function initDataTable() {
+	
 	var datos = [];
 	$.ajax({
         async: false,
@@ -12,7 +12,6 @@ function initDataTable() {
         success: function (data) {
             $.each(data, function(i, item){
                 $.each(item, function (index1, item1) {
-
 					if (item1.rol == 1) {
 						var rol = 'Administrador'
 					} else {
@@ -59,7 +58,7 @@ function initDataTable() {
 
 	// Obtiene los parametros de la tabla con un click
 	$('#dtUsuarios tbody').on('click', 'tr', function () {
-	    data = table.row( this ).data();
+		data = table.row( this ).data();
 	});
 
 
@@ -78,7 +77,7 @@ function initDataTable() {
 	// Obtiene los datos y lleva al formulario para editar el registro
 	$('#dtUsuarios tbody').on('dblclick', 'tr', function () {
 		data = table.row( this ).data();
-//		formEditar(data);
+		formEditar(data);
     });
 }
 

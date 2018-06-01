@@ -3,7 +3,9 @@ var table;
 var data;
 
 $(() => {
-
+	$("#modulo").append('Gestión Usuarios');
+	$("#sideUsuarios").addClass('active');
+	
     $("#formDiv").hide();
     $("#gestionDiv").hide();
     $("#gestionDiv").toggle("swing");
@@ -20,7 +22,6 @@ function init() {
 
 	// Guarda Registro
 	$('#btnGuardar').click(function () {
-		console.log("btnGuardar");
 		$('#form').data('bootstrapValidator').validate();
 	    var n = $('#form').data('bootstrapValidator').isValid();
 		 if (n) {
@@ -33,15 +34,15 @@ function init() {
 	});
 
     // Actualiza Registro
-//	$("#btnGuardarEditar").click(() => {
-//		$('#form').data('bootstrapValidator').validate();
-//	    var n = $('#form').data('bootstrapValidator').isValid();
-//	    if (n) {
-//			 editarUsuario();
-//		} else {
-//			$('#btnGuardarEditar').prop("disabled", true);
-//            notifyError('Error', 'Verificar datos ingresados');
-//			bootsValEditar();
-//		}
-//	})
+	$("#btnGuardarEditar").click(() => {
+		$('#form').data('bootstrapValidator').validate();
+	    var n = $('#form').data('bootstrapValidator').isValid();
+	    if (n) {
+			 editar();
+		} else {
+			$('#btnGuardarEditar').prop("disabled", true);
+            notifyError('Error', 'Verificar datos ingresados');
+			bootsValEditar();
+		}
+	})
 }
