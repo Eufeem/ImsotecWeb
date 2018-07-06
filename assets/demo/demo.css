@@ -87,3 +87,21 @@ a {
     /* position: absolute !important; */
     bottom: 0 !important;
 }
+
+/* Buttons DataTable [PDF - EXCEL] */
+button.btn.btn-secondary.buttons-pdf.buttons-html5 {
+  background-color: #de0b0b !important;
+}
+
+button.btn.btn-secondary.buttons-pdf.buttons-html5:hover {
+  background-color: #f32525 !important;
+}
+
+button.btn.btn-secondary.buttons-excel.buttons-html5 {
+  background-color: #1f6b41 !important;
+}
+
+button.btn.btn-secondary.buttons-excel.buttons-html5:hover {
+  background-color: #298d56 !important;
+}
+

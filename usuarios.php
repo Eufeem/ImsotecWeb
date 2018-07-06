@@ -34,7 +34,7 @@
                   <div class="col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                   <div class="col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                       <div class="table">
-                          <table class="table-bordered table-hover" id="dtUsuarios" style="width:100% !important;">
+                          <table class="table-bordered table-hover display" id="dtUsuarios" style="width:100% !important;">
                               <thead>
 								<tr>
                                     <th>id</th>
@@ -95,7 +95,7 @@
                                 <label>Rol</label>
                                 <select class="form-control" id="rol" name="rol">
                                 	<option disabled selected value>Selecciona</option>
-                                    <option value="1">Adminitrador</option>
+                                    <option value="1">Administrador</option>
                                     <option value="2">Usuario</option>
                                 </select>
                             </div>

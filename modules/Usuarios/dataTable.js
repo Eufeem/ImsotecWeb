@@ -34,7 +34,21 @@ function initDataTable() {
         },
         data: datos,
         responsive: true,
-        buttons: [ 'copy', 'csv', 'excel' ],
+        dom: "<'row'<'col-sm-4'l><'col-sm-4'f><'col-sm-4'B>>" +
+        	 "t" +
+        	 "<'row'<'col-sm-6'i><'col-sm-6'p>>",
+        buttons: [
+                // 'copy',
+                {
+                    extend:   'pdf',
+                    text:     'Archivo PDF',
+                    filename: 'ReporteUsuarios' + obtenerFecha()
+                },
+                {
+                    extend: 'excel',
+                    text: 'Archivo Excel',
+                    filename: 'ReporteUsuarios' + obtenerFecha()
+                }],
         columns: [
         	{
 	        	title: "id",
@@ -109,4 +123,13 @@ function cargarTabla() {
     table.clear();
     table.rows.add(datos);
     table.draw();
+}
+
+
+function obtenerFecha() {
+    var dt = new Date();
+    var month = dt.getMonth()+1;
+    var day = dt.getDate();
+    var year = dt.getFullYear();
+    return(day + '-' + month + '-' + year);
 }
